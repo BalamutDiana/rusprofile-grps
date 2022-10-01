@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package rusprofile;
+
+import "google/api/annotations.proto";
+
+option go_package = "../proto/server";
+
+service CompanyInfoService {
+    rpc GetMainInfo(Request) returns (Response) {
+        option (google.api.http) = {
+            get: "/{inn}"
+        };
+    }
+}
+
+message Request {
+    string inn = 1;
+}
+
+message Response {
+    string company = 1;
+    string ceo = 2;
+    string inn = 3;
+    string kpp = 4;
+}
