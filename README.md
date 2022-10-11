@@ -7,4 +7,4 @@ You can call the function both using gRPS and the HTTP API. HTTP requests are im
   - gRPC-Gateway
   - buf
 
-++Work in progress++
+Work in progress
